@@ -43,7 +43,7 @@ class Reprodutor :
     def continuar ():
         musica_atual = mixer.music.unpause() #Continua do local pausado
 
-#Bug da troca de música corrigido
+
         
     def proxima ():
         for item in range(len(musicas)):
@@ -60,13 +60,13 @@ class Reprodutor :
 
 
 			
-			#Evaldo, Janelas
+#Evaldo, Janelas
 
 player = Reprodutor
 
 janela =Tk()
 
-janela.title("Projeto - Mp3 Player") #Titulo
+janela.title("Projeto - Mp3 Player") 
 
 #Problema corrigido
 bt_escolher = Button(janela, width=20, text="ADICIONAR MUSICAS",  command=player.escolher)
