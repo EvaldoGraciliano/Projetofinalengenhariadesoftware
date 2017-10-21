@@ -58,3 +58,38 @@ class Reprodutor :
             musica_atual = mixer.music.load(musicas[item])
             musica_atual = mixer.music.play()
 
+
+			
+			#Evaldo, Janelas
+
+player = Reprodutor
+
+janela =Tk()
+
+janela.title("Projeto - Mp3 Player") #Titulo
+
+#Problema corrigido
+bt_escolher = Button(janela, width=20, text="ADICIONAR MUSICAS",  command=player.escolher)
+bt_proxima  = Button(janela, width=10, text="PROXIMA",            command=player.proxima)
+bt_anterior = Button(janela, width=10, text="ANTERIOR",           command=player.anterior)
+
+bt_escolher.place (x=10,  y=50 )
+bt_proxima.place  (x=170, y=50)
+bt_anterior.place (x=270, y=50)
+
+
+
+bt_play    = Button(janela, width=10, text="PLAY",    command=player.reproduzir)
+bt_pause   = Button(janela, width=10, text="PAUSAR",  command=player.pausar)
+bt_stop    = Button(janela, width=10, text="PARAR",   command=player.parar)
+bt_return  = Button(janela, width=10, text="CONTINUAR", command=player.continuar)
+
+bt_play.place   (x=10,  y=0)
+bt_pause.place  (x=110, y=0)
+bt_stop.place   (x=210, y=0)
+bt_return.place (x=310, y=0)
+
+janela.geometry("410x200+450+350")
+janela.mainloop()
+
+
